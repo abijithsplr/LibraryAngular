@@ -1,0 +1,63 @@
+<h2 class="headtag">Login / Sign Up to access Books & Authors. </h2>
+<br>
+
+<!-- <h2 class="headtag">Explore</h2>
+<br> -->
+
+<div class="row justify-content-center">
+  <div class="col-md-3" *ngIf="!ServiceObj.getlogin()">
+    <a routerLink="login" class="btn btn-outline-default mycard">
+      <!-- <ion-icon name="person-circle" class="iconl"></ion-icon> -->
+      <span class="ion ion-person-circle"></span>
+      <div>LOGIN</div>
+    </a>
+  </div>
+  <div class="col-md-3" *ngIf="!ServiceObj.getlogin()">
+    <a routerLink="signup" class="btn btn-outline-default mycard">
+      <!-- <ion-icon name="person-add" class="iconl"></ion-icon> -->
+      <div>SIGNUP</div>
+
+    </a>
+  </div>
+</div>
+<br>
+
+
+
+<div class="row justify-content-center">
+  <div class="col-md-3">
+    <a routerLink="books" class="btn btn-outline-default  mycard">
+      <!-- <ion-icon name="book" class="iconl"></ion-icon> -->
+      <div>BOOKS</div>
+
+    </a>
+  </div>
+  <div class="col-md-3">
+    <a routerLink="authors" class="btn btn-outline-default  mycard">
+      <!-- <ion-icon name="pencil-outline" class="iconl"></ion-icon> -->
+      <div>AUTHORS</div>
+
+    </a>
+  </div>
+</div>
+<br>
+
+
+<div class="row justify-content-center">
+  <div class="col-md-3">
+    <a routerLink="addbook" class="btn btn-outline-default  mycard">
+      <!-- <ion-icon name="book" class="iconl"></ion-icon> -->
+      <!-- <ion-icon name="add-circle" class="text-success h4"></ion-icon> -->
+      <div> ADD BOOK</div>
+
+    </a>
+  </div>
+  <div class="col-md-3">
+    <a routerLink="addauthor" class="btn btn-outline default  mycard">
+      <!-- <ion-icon name="pencil-outline" class="iconl"></ion-icon> -->
+      <!-- <ion-icon name="add-circle" class="text-success h4"></ion-icon> -->
+      <div>ADD AUTHOR</div>
+
+    </a>
+  </div>
+</div>

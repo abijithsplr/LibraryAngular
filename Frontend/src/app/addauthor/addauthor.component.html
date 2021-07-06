@@ -1,0 +1,42 @@
+<!-- <pre>{{addauthor.value |json}}</pre>
+<pre>{{addauthor.valid | json}}</pre> -->
+<form class="card" id="set" (ngSubmit)='addauthor()' encType="multipart/form-data"
+  [formGroup]='addauthorform'>
+  <div class="mb-3">
+    <label for="InputAuthorName" class="form-label">Author Name<span id="reqWarning"> *</span></label>
+    <input type="text" class="form-control" placeholder="Author Name" id="InputAuthorName" name="name"
+      formControlName='name'>
+    <!-- <div id="emailHelp1" class="form-text">Enter the user name you</div> -->
+  </div>
+  <div class="mb-3">
+    <div class="row">
+      <div class="col">
+        <label for="InputLanguage" class="form-label">Language<span id="reqWarning"> *</span></label>
+        <input type="text" class="form-control" placeholder="Language" id="InputLanguage" name="language"
+          aria-label="InputLanguage" formControlName='language'>
+      </div>
+      <div class="col">
+        <label for="Inputdob" class="form-label">Date of birth<span id="reqWarning"> *</span></label>
+        <input type="text" class="form-control" placeholder="dd mm yyyy"  id="Inputdob" aria-label="Inputdob" name="dob"
+          formControlName='dob'>
+      </div>
+    </div>
+  </div>
+  <div class="mb-3">
+    <label for="InputAbout" class="form-label">About<span id="reqWarning"> *</span></label>
+    <textarea class="form-control" placeholder="About the author" id="InputAbout" rows="6" name="content"
+      formControlName='content'></textarea>
+    <!-- <input type="text-arera" class="form-control" placeholder="" aria-label="InputAbout" required> -->
+  </div>
+  <div class="mb-3">
+    <label for="InputImageAuthor" class="form-label">Author image<span id="reqWarning"> *</span></label>
+    <input class="form-control" type="file" accept="image/*" id="InputImageAuthor" 
+      formControlName='img' >
+  </div>
+  <div class="mb-3">
+    <div id="field" class="form-text ms-auto"></div>
+  </div>
+  <div class="mb-3">
+    <button type="submit" [disabled]='addauthorform.invalid' class="btn btn-primary formbtn">Add Author</button>
+  </div>
+</form>

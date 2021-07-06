@@ -1,0 +1,41 @@
+<div class="panel" *ngFor="let authors of authors">
+  <div class="row ">
+    <div class="col-md-2 col-sm-3 text-center">
+      <img src="../assets/images/{{authors.img}}" alt="" srcset="" class="coverview">
+    </div>
+    <div class="col-md-10 col-sm-9">
+      <h3 class="head" style="text-align: left;">
+        {{authors.name}}
+      </h3>
+
+      <div class="row">
+        <div class="col">
+          <h4><span class="label label-default">
+              {{authors.language}}
+            </span></h4>
+        </div>
+        
+          <div class="col" id="fileChanger" *ngIf="getaccess()">
+            <div class="d-flex justify-content-center">
+              <a href="authors/update/{{authors._id}}/"> <button class="btn btn-success control"> UPDATE
+                  <!-- <ion-icon name="arrow-up-circle"></ion-icon> -->
+                </button></a>
+
+              <a ><button class="btn btn-danger control" (click)="deleteAuthor(authors._id)">DELETE
+                  <!-- <ion-icon name="trash"></ion-icon> -->
+                </button></a>
+            </div>
+          </div>
+          
+        <h4>
+          <span class="text-muted small">
+            {{authors.dob}} .
+          </span>
+          <a routerLink="{{authors._id}}" class="text-muted small">Read More</a>
+        </h4>
+      </div>
+    </div>
+  </div>
+  <br>
+  <hr>
+</div>
